@@ -18,7 +18,13 @@
     <!-- notification for small viewports and landscape oriented smartphones -->
     <div class="device-notification">
       <a class="device-notification--logo" href="#0">
-        <img src="assets/img/logo.png" alt="Global" />
+        <img
+          src="assets/img/logo.png"
+          alt="Aditya"
+          height="30"
+          width="30"
+          class="hide-icon-on-mobile"
+        />
         <p>Aditya Sinha</p>
       </a>
       <p class="device-notification--message">
@@ -39,6 +45,7 @@
                   alt="Aditya"
                   height="30"
                   width="30"
+                  class="hide-icon-on-mobile"
                 />
                 <p>Aditya Sinha</p>
               </a>
@@ -354,7 +361,12 @@
                 <div class="hire">
                   <h2>You want me to do</h2>
                   <!-- checkout formspree.io for easy form setup -->
-                  <form class="work-request">
+                  <form
+                    class="work-request"
+                    method="post"
+                    action=""
+                    name="formc"
+                  >
                     <div class="work-request--options">
                       <span class="options-a">
                         <input id="opt-1" type="checkbox" value="app design" />
@@ -509,11 +521,22 @@
                     </div>
                     <div class="work-request--information">
                       <div class="information-name">
-                        <input id="name" type="text" spellcheck="false" />
+                        <input
+                          id="name"
+                          type="text"
+                          spellcheck="false"
+                          name="message"
+                          max="100000000"
+                        />
                         <label for="name">Message</label>
                       </div>
                       <div class="information-email">
-                        <input id="email" type="email" spellcheck="false" />
+                        <input
+                          id="email"
+                          type="email"
+                          spellcheck="false"
+                          name="email"
+                        />
                         <label for="email">Email</label>
                       </div>
                     </div>
@@ -542,5 +565,22 @@
         );
     </script>
     <script src="assets/js/functions-min.js"></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycby_WxboPFbsXBlNp3ErfnO-l4ZCI0HMwB7ZDknUvuEUiE63NEHkLayZth0DZqoOKA6t/exec";
+      const form = document.forms["formc"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) =>
+            alert("Thank you! your form is submitted successfully.")
+          )
+          .then(() => {
+            window.location.reload();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
