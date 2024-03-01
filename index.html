@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Aditya Sinha</title>
-    <link rel="icon" href="assets/img/logo.png" />
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -40,13 +40,6 @@
           <div class="l-wrapper">
             <header class="header">
               <a class="header--logo" href="#">
-                <img
-                  src="assets/img/logo.png"
-                  alt="Aditya"
-                  height="30"
-                  width="30"
-                  class="hide-icon-on-mobile"
-                />
                 <p>Aditya Sinha</p>
               </a>
               <button class="header--cta cta">Hire Me</button>
@@ -343,10 +336,7 @@
               <li class="l-section section">
                 <div class="about">
                   <div class="about--banner">
-                    <h2>
-                      A guy passionate <br />about his work<br />
-                      and style 😜
-                    </h2>
+                    <h2>A guy passionate <br />about his work</h2>
                     <a
                       >About Me
                       <span>
@@ -372,11 +362,11 @@
                       </span>
                       <p>
                         I'm a self taught
-                        <span style="color: #0a66c2">web developer</span> with
-                        experience in
-                        <span style="color: blue">TypeScript</span> and
+                        <span>web developer</span> with experience in
+                        <span style="color: blue">TypeScript</span> ,
                         <br />
-                        <span style="color: yellow">JavaScript</span> , and
+                        <span style="color: greenyellow">JavaScript</span> and
+                        <span style="color: yellow">Python</span> , and
                         expertise in frameworks like
                         <span style="color: cyan">React</span> ,
                         <span style="color: lightgreen">Node.js</span> and
@@ -390,13 +380,22 @@
                       </p>
                     </a>
 
-                    <img
-                      src="assets/img/me-new.png"
-                      alt="About Me"
-                      height="500"
-                      width="500"
-                      style="margin: 0 -260px 100px 0"
-                    />
+                    <div class="tech">
+                      <img src="./assets/img/html.png" height="50px" />
+                      <img src="./assets/img/css-3.png" height="50px" />
+                      <img src="./assets/img/tail.png" height="50px" />
+                      <img src="./assets/img/js.png" height="50px" />
+                      <img src="./assets/img/py.png" height="50px" />
+                      <img src="./assets/img/ts.png" height="50px" />
+                      <img src="./assets/img/react.png" height="50px" />
+                      <img src="./assets/img/r-native.png" height="50px" />
+                      <img src="./assets/img/next.png" height="50px" />
+                      <img src="./assets/img/node.jpg" height="50px" />
+                      <img src="./assets/img/exp.png" height="50px" />
+                      <img src="./assets/img/mongo.png" height="50px" />
+                      <img src="./assets/img/git.png" height="50px" />
+                      <img src="./assets/img/github.png" height="50px" />
+                    </div>
                   </div>
                 </div>
               </li>
@@ -407,11 +406,10 @@
                   <div class="contact--lockup">
                     <div class="modal">
                       <div class="modal--information">
-                        <p>New Delhi , Delhi , India</p>
+                        <p>Meerut , U.P. , India</p>
                         <a href="mailto:adityasinha3201@gmail.com"
                           >adityasinha3201@gmail.com</a
                         >
-                        <a href="tel:+91 6399468359">+91 6399468359</a>
                       </div>
                       <ul class="modal--options">
                         <li style="background-color: #22272e">
@@ -654,7 +652,7 @@
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) =>
-            alert("Thank you! your form is submitted successfully.")
+            alert("Thank you for contacting ! I have recieved your message 😄")
           )
           .then(() => {
             window.location.reload();
