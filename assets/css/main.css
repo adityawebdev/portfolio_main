@@ -987,6 +987,15 @@ body {
   height: 400px;
 }
 
+.work--lockup .slider--item-center .slider--item-image img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
 .work--lockup .slider--next,
 .work--lockup .slider--prev {
   position: absolute;
